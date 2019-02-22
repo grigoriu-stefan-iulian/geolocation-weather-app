@@ -1,9 +1,11 @@
 .header {
-    background: $dark-blue;
-    padding: $m-size 0;
+    background: $light-blue;
+    padding: $s-size;    
+    padding-top: $l-size;
 }
 
 .header__title {
+    color: #e74c3c;
     font-size: $l-size;
     margin: 0;
 }

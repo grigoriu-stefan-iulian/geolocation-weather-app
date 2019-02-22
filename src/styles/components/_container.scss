@@ -1,5 +1,16 @@
-.container {
-    margin: 0 auto;
+.container__outer {
+    align-items: center;
+    background: $gradient;
+    color: white;
+    display: flex;
+    font-size: 1.3rem;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container__inner {   
+    background: $dark-blue;
+    border-radius: .5rem;
     max-width: 60rem;
     padding: 0 $s-size;
 }

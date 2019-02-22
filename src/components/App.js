@@ -32,7 +32,7 @@ class App extends Component {
   getWeather = async (latitude, longitude) => {
     const cInput = document.getElementById('celsius')
     const fInput = document.getElementById('fahrenheit')
-    const weather = await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`)
+    const weather = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`)
     const data = await weather.json()
 
     if (data) {
@@ -87,19 +87,20 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <Header />
-        <div className="container">
-          <Quests />
-          <WeatherComponent
-            temp={this.state.temp}
-            city={this.state.city}
-            pressure={this.state.pressure}
-            humidity={this.state.humidity}
-            wind={this.state.wind}
-          />
+      <div className="container__outer">
+        <div className="container__inner">
+          <Header />
+          <div>
+            <Quests />
+            <WeatherComponent
+              temp={this.state.temp}
+              city={this.state.city}
+              pressure={this.state.pressure}
+              humidity={this.state.humidity}
+              wind={this.state.wind}
+            />
+          </div>
         </div>
-
       </div>
     );
   }
